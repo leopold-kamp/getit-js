@@ -44,8 +44,3 @@ export enum EMappingType {
   DATE,
   MODEL
 }
-
-export enum ERequestType {
-  CREATE,
-  UPDATE
-}
