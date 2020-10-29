@@ -1,0 +1,25 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "linterOptions": {
+        "exclude": [
+            "bin",
+            "node_modules/*"
+        ]
+    },
+    "rules": {
+        "semicolon": [true, "never"],
+        "space-before-function-paren": [true, "always"],
+        "prefer-const": false,
+        "quotemark": [true, "single", "avoid-escape", "avoid-template", "jsx-single"],
+        "trailing-comma": [true, {"multiline": "never", "singleline": "never"}],
+        "ordered-imports": false,
+        "arrow-parens": false,
+        "no-empty-interface": false,
+        "no-console": false,
+        "no-string-literal": false
+    },
+    "rulesDirectory": []
+}

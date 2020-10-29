@@ -29,7 +29,6 @@ export default abstract class AbstractApiService {
       let result = await axios.post(url, data, { headers: this.headers, params: parsedParams })
       return result.data.data
     } catch (e) {
-      console.error(e.message)
       throw e
     }
   }
@@ -43,7 +42,6 @@ export default abstract class AbstractApiService {
       let result = await axios.get(url, { params: this.parseFilter(params), headers: this.headers })
       return result.data.data
     } catch (e) {
-      // console.error(e.message)
       throw e
     }
   }
@@ -57,7 +55,6 @@ export default abstract class AbstractApiService {
       let result = await axios.get(url, { params: this.parseFilter(params), headers: this.headers })
       return result.data.data
     } catch (e) {
-      // console.error(e.message)
       throw e
     }
   }
@@ -71,7 +68,6 @@ export default abstract class AbstractApiService {
       let result = await axios.patch(url, data, { headers: this.headers })
       return this.getIdentifierFromResponse(result.data)
     } catch (e) {
-      console.error(e.message)
       throw e
     }
   }
@@ -85,7 +81,6 @@ export default abstract class AbstractApiService {
       let result = await axios.delete(url, { headers: this.headers })
       return this.getIdentifierFromResponse(result.data)
     } catch (e) {
-      console.error(e.message)
       throw e
     }
   }
@@ -102,7 +97,6 @@ export default abstract class AbstractApiService {
     let parsed: any = {}
     _.forEach(filters, (element: any, key: string) => {
       if (typeof (element) === typeof ([])) {
-        console.log('filter is array')
         parsed[key] = _.join(element, ',')
       } else {
         parsed[key] = element
