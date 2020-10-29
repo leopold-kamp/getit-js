@@ -109,7 +109,7 @@ export abstract class AbstractApiService {
     if (_.isEmpty(data) === false) {
       let uri = new URITemplate(this.getBaseUrl() + url)
       let endpointUrl = uri.expand(data)
-      return endpointUrl
+      return endpointUrl.toString()
     }
     return this.getBaseUrl() + url
   }
