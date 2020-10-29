@@ -1,3 +1,3 @@
-export * from './models/AbstractModel'
-export * from './models/IMappingConfig'
-export * from './services/AbstractService'
+export { AbstractModel } from './models/AbstractModel'
+export { IMappingConfigItem, IMappingConfig, EMappingType } from './models/IMappingConfig'
+export { AbstractApiService } from './services/AbstractService'
