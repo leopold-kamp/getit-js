@@ -1,9 +1,9 @@
 {
   "name": "getit-js",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "type": "module",
   "description": "A small helper package for parsing api responses.",
-  "main": "index.ts",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "tslint --project .",
