@@ -4,7 +4,7 @@ import URITemplate from 'urijs/src/URITemplate'
 import * as _ from 'lodash'
 import { IConfig } from './Config'
 
-export default abstract class AbstractApiService {
+export abstract class AbstractApiService {
   protected config: IConfig
 
   protected headers: object = {}
