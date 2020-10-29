@@ -1,0 +1,27 @@
+{
+  "name": "getit",
+  "version": "0.1.0",
+  "description": "A small helper package for parsing api responses.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leopold-kamp/getit-js.git"
+  },
+  "keywords": [
+    "typescript",
+    "api",
+    "parser"
+  ],
+  "author": "Leopold Kamp <develop@leopold-kamp.de>",
+  "license": "MIT License",
+  "bugs": {
+    "url": "https://github.com/leopold-kamp/getit-js/issues"
+  },
+  "homepage": "https://github.com/leopold-kamp/getit-js#readme",
+  "dependencies": {
+    "lodash": "^4.17.20"
+  }
+}
