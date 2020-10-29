@@ -120,13 +120,10 @@ export default abstract class AbstractApiService {
     return this.getBaseUrl() + url
   }
 
-  protected getBaseUrl (): string {
-    let url = process.env.API_BASE_URL
-    return (url === undefined) ? 'http://localhost:8080/api' : url
-  }
+  protected abstract getBaseUrl (): string
 
-  protected parseParams (params: any) {
-    if (params === undefined || params === null) { return params }
+  protected parseParams (params: any) {
+    if (params === undefined || params === null) { return params }
     let parsed: any = {}
     _.forEach(params, (value, key) => {
       if (_.isBoolean(value)) {
