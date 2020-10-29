@@ -6,8 +6,7 @@
     "linterOptions": {
         "exclude": [
             "bin",
-            "node_modules/*",
-            "*.js"
+            "node_modules/*"
         ]
     },
     "rules": {
