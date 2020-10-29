@@ -16,7 +16,7 @@
     "parser"
   ],
   "author": "Leopold Kamp <develop@leopold-kamp.de>",
-  "license": "MIT License",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/leopold-kamp/getit-js/issues"
   },
