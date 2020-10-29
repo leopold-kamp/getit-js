@@ -85,7 +85,7 @@ export abstract class AbstractModel {
         return origin
       case EMappingType.DATE:
         if (_.isDate(origin) || _.isString(origin)) {
-          return new Date(origin)
+          return new Date(`${origin}`)
         }
         return origin
       case EMappingType.MODEL:
