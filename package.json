@@ -1,6 +1,6 @@
 {
   "name": "getit-js",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "type": "module",
   "description": "A small helper package for parsing api responses.",
   "main": "index.js",
