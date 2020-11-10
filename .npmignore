@@ -1,1 +1,5 @@
 node_modules
+coverage/
+__mocks__
+__tests__
+jest.config.js
