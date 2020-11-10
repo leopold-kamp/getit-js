@@ -157,7 +157,7 @@ export abstract class AbstractModel {
    * It can be extended to mutate data before sending a Create request.
    */
   public beforeCreate () {
-    const self = this
+    const self: any = this
     for (const prop of Object.keys(self)) {
       const item: any = self[prop]
       if (_.isArray(item)) {

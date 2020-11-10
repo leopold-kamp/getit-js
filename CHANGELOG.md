@@ -1,5 +1,11 @@
 # Changelog #
 
+## 0.2.2 (2020-11-10) ##
+
+### Release Highlights ###
+
+Just a small typescript compile fix for beforeCreate in AbstractModel
+
 ## 0.2.1 (2020-11-10) ##
 
 ### Release Highlights ###
