@@ -108,6 +108,66 @@ export abstract class AbstractModel {
   }
 
   /**
+   * This function is for mutating API data before send an Update request
+   * Loop through all items and call beforeUpdate() if item is type of Abstract Model
+   * @param list this can be a list of any items.
+   */
+  public static beforeUpdateList (list: any[]) {
+    for (const item of list) {
+      if (_.isArray(item)) {
+        this.beforeUpdateList(item)
+      } else if (item instanceof AbstractModel) {
+        item.beforeUpdate()
+      }
+    }
+  }
+  /**
+   * This function is for mutating API data before send an Create request
+   * Loop through all items and call beforeCreate() if item is type of Abstract Model
+   * @param list this can be a list of any items.
+   */
+  public static beforeCreateList (list: any[]) {
+    for (const item of list) {
+      if (_.isArray(item)) {
+        this.beforeCreateList(item)
+      } else if (item instanceof AbstractModel) {
+        item.beforeCreate()
+      }
+    }
+  }
+
+  /**
+   * This function will iterate through all properties and recursivly call beforeUpdate or beforeUpdateList.
+   * It can be extended to mutate data before sending an Update request.
+   */
+  public beforeUpdate () {
+    const self: any = this
+    for (const prop of Object.keys(self)) {
+      const item: any = self[prop]
+      if (_.isArray(item)) {
+        AbstractModel.beforeUpdateList(item)
+      } else if (item instanceof AbstractModel) {
+        item.beforeUpdate()
+      }
+    }
+  }
+
+  /**
+   * This function will iterate through all properties and recursivly call beforeUpdate or beforeUpdateList.
+   * It can be extended to mutate data before sending a Create request.
+   */
+  public beforeCreate () {
+    const self = this
+    for (const prop of Object.keys(self)) {
+      const item: any = self[prop]
+      if (_.isArray(item)) {
+        AbstractModel.beforeCreateList(item)
+      } else if (item instanceof AbstractModel) {
+        item.beforeCreate()
+      }
+    }
+  }
+  /**
    * Return the Mapping config for a model
    * TODO: possible type parsing
    * TODO: Deep parsing -> differ between obj and string ...
