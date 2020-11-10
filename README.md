@@ -25,6 +25,7 @@ class OtherClass extends AbstractModel {
 }
 
 class User extends AbstractModel {
+  loading: false
   reference!: number
   email!: string
   details!: OtherClass
@@ -48,6 +49,10 @@ class User extends AbstractModel {
     }
   }
 
+  public beforeUpdate () {
+    this.loading = true
+    super.beforeUpdate()
+  }
 }
 ```
 
